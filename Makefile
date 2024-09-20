@@ -158,11 +158,7 @@ install-frontend-dependencies:
 	@cd frontend && npm install
 	@echo "$(GREEN)Frontend dependencies installed successfully.$(RESET)"
 
-install-pre-commit-hooks:
-	@echo "$(YELLOW)Installing pre-commit hooks...$(RESET)"
-	@git config --unset-all core.hooksPath || true
-	@poetry run pre-commit install --config $(PRE_COMMIT_CONFIG_PATH)
-	@echo "$(GREEN)Pre-commit hooks installed successfully.$(RESET)"
+
 
 lint-backend:
 	@echo "$(YELLOW)Running linters...$(RESET)"
